@@ -30,7 +30,14 @@ const FriendList = () => {
       <FriendForm />
       <div>
         {friends.map(friend => {
-          return <FriendCard key={friend.id} friend={friend} />;
+          return (
+            <FriendCard
+              key={friend.id}
+              name={friend.name}
+              age={friend.age}
+              email={friend.email}
+            />
+          );
         })}
       </div>
     </div>
