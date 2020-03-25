@@ -29,18 +29,21 @@ const FriendForm = () => {
       <input
         type="text"
         name="name"
+        placeholder="Name"
         value={newFriend.name}
         onChange={handleChanges}
       />
       <input
         type="age"
         name="tel"
+        placeholder="Age"
         value={newFriend.age}
         onChange={handleChanges}
       />
       <input
         type="email"
         name="email"
+        placeholder="Email"
         value={newFriend.email}
         onChange={handleChanges}
       />
