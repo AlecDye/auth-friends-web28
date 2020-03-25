@@ -12,23 +12,23 @@ const FriendList = () => {
     axiosWithAuth()
       .get("friends")
       .then(res => {
-        console.log(res);
+        // console.log(res);
         setFriends(res.data);
       })
       .catch(err => {
         console.err(err);
       });
-    useEffect(() => {
-      getData();
-    }, []);
   };
 
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <div>
       <h1>Friends!</h1>
       <div>
         {friends.map(friend => {
-          <FriendCard key={key} friend={friend} />;
+          return <FriendCard key={friend.id} friend={friend} />;
         })}
       </div>
     </div>
